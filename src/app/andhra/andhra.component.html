@@ -1,6 +1,7 @@
 <div class="container">
   <br>
   <button class="btn btn-primary" (click)="home()">Home</button><br><br>
+  <div class="table-responsive-md">
   <table class="table table-striped">
     <thead class="thead-dark">
       <tr>
@@ -14,7 +15,7 @@
     <tbody>
       <tr *ngFor="let dist of districts">
       <!-- <tr> -->
-        <th scope="row">{{dist.district}}</th>
+        <td scope="row">{{dist.district}}</td>
         <td>{{dist.confirmed}}</td>
         <td>{{dist.active}}</td>
         <td>{{dist.recovered}}</td>
@@ -22,4 +23,5 @@
       </tr>
     </tbody>
   </table>
+</div>
 </div>

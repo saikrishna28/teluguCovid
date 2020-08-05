@@ -1,24 +1,26 @@
 <div class="container">
   <br>
   <button class="btn btn-primary" (click)="home()">Home</button><br><br>
-  <table class="table table-striped">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">District</th>
-        <th scope="col">Confirmed</th>
-        <th scope="col">Active</th>
-        <th scope="col">Recovered</th>
-        <th scope="col">Deceased</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let dist of districts">
-        <th scope="row">{{dist.district}}</th>
-        <td>{{dist.confirmed}}</td>
-        <td>{{dist.active}}</td>
-        <td>{{dist.recovered}}</td>
-        <td>{{dist.deceased}}</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="table-responsive-md">
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">District</th>
+          <th scope="col">Confirmed</th>
+          <th scope="col">Active</th>
+          <th scope="col">Recovered</th>
+          <th scope="col">Deceased</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dist of districts">
+          <td scope="row">{{dist.district}}</td>
+          <td>{{dist.confirmed}}</td>
+          <td>{{dist.active}}</td>
+          <td>{{dist.recovered}}</td>
+          <td>{{dist.deceased}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
