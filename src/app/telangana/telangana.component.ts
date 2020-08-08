@@ -13,6 +13,10 @@ import { District } from '../models/district';
 export class TelanganaComponent implements OnInit {
 
   districts: StateData[] = [];
+  act: number = 0;
+  rec: number = 0;
+  cnf: number = 0;
+  dec: number = 0;
   constructor(private dataSer: DataServiceService, private route: Router) { }
 
   ngOnInit() {
@@ -31,11 +35,14 @@ export class TelanganaComponent implements OnInit {
                 let dist = new StateData();
                 dist.district = key2;
                 dist.active = +disData[key2].active;
+                this.act += +disData[key2].active;
                 dist.confirmed = +disData[key2].confirmed;
+                this.cnf += +disData[key2].confirmed;;
                 dist.deceased = +disData[key2].deceased;
+                this.dec += +disData[key2].deceased;
                 dist.recovered = +disData[key2].recovered;
+                this.rec += +disData[key2].recovered;
                 this.districts.push(dist);
-                console.log(dist);
               }
           }
         }

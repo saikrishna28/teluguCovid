@@ -1,27 +1,35 @@
 <div class="container">
   <br>
   <button class="btn btn-primary" (click)="home()">Home</button><br><br>
+  <h5 style="font-family:Courier New, Courier, monospace;font-weight: bold;">Andhra Pradesh :</h5>
+  <div class="row" style="margin-left: 0;">
+    <h6 style="font-family:Courier New, Courier, monospace;"> Total cases - </h6>
+    <h6 style="color: red;font-weight: bold;margin-left: 5px;">cnf: {{cnf}}</h6>
+    <h6 style="color: blue;font-weight: bold;margin-left: 15px;">act: {{act}}</h6>
+    <h6 style="color: green;font-weight: bold;margin-left: 15px;">rec: {{rec}}</h6>
+    <h6 style="color: black;font-weight: bold;margin-left: 15px;">dec: {{dec}}</h6>
+  </div>
   <div class="table-responsive-md">
-  <table class="table table-striped">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">District</th>
-        <th scope="col">Confirmed</th>
-        <th scope="col">Active</th>
-        <th scope="col">Recovered</th>
-        <th scope="col">Deceased</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let dist of districts">
-      <!-- <tr> -->
-        <td scope="row">{{dist.district}}</td>
-        <td>{{dist.confirmed}}</td>
-        <td>{{dist.active}}</td>
-        <td>{{dist.recovered}}</td>
-        <td>{{dist.deceased}}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">District</th>
+          <th scope="col">Confirmed</th>
+          <th scope="col">Active</th>
+          <th scope="col">Recovered</th>
+          <th scope="col">Deceased</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dist of districts">
+          <!-- <tr> -->
+          <td scope="row">{{dist.district}}</td>
+          <td>{{dist.confirmed}}</td>
+          <td>{{dist.active}}</td>
+          <td>{{dist.recovered}}</td>
+          <td>{{dist.deceased}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
